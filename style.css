@@ -1,0 +1,514 @@
+/***********************************************************************
+ *  ATLAS FONTS                                                        *
+ **********************************************************************/
+/* default */
+@font-face {
+  font-family: 'SancoaleRegular';
+  src: url('fonts/SancoaleRegular.otf') format('opentype');
+}
+
+/* medium */
+@font-face {
+  font-family: 'SancoaleMedium';
+  src: url('fonts/SancoaleMedium.otf') format('opentype');
+}
+
+/* bold */
+@font-face {
+  font-family: 'SancoaleBold';
+  src: url('fonts/SancoaleBold.otf') format('opentype');
+}
+
+/* black */
+@font-face {
+  font-family: 'SancoaleBlack';
+  src: url('fonts/SancoaleMedium.otf') format('opentype');
+}
+
+.atlas-font {
+  font-family: 'SancoaleBold', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: auto 0;
+  /* font-family: 'Poiret', Helvetica, sans-serif; */
+  /* font-family: 'SancoaleRegular', sans-serif; */
+  font-family: Calibri, 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+/***********************************************************************
+ *  NAVBAR
+ **********************************************************************/
+.navbar {
+  width: 100%;
+  z-index: 2;
+  background: transparent;
+}
+
+.sticky {
+  position: fixed;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.main-nav {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  transition: all 0.8s ease-in;
+}
+
+.nav-link {
+  padding: 15px 55px;
+  text-align: center;
+}
+
+.main-nav a {
+  font-size: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+/* NAV TOGGLE */
+.navbar-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+/* NAV SCROLL */
+.nav-scroll {
+  background: #005a9c;
+  margin: 0;
+  transition: all 0.7s ease-in;
+  /* -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px; */
+}
+
+
+@media screen and (min-width: 900px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo {
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .navbar {
+    background: rgba(205, 16, 65, 0.9);
+    margin: 0;
+  }
+
+  .nav-scroll {
+    background: rgba(0, 90, 156, 1);
+  }
+
+}
+
+
+/***********************************************************************
+ *  MAIN LANDING PAGE
+ **********************************************************************/
+.main-landing {
+  background-image: url(img/background6.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.skew {
+  width: 70vw;
+  height: 100vh;
+  background: rgba(0, 90, 156, 0.6);
+  margin-left: -250px;
+  color: #fff;
+  transform: skewX(-205deg);
+  position: absolute;
+}
+
+.skew_2 {
+  width: 76vw;
+  height: 100vh;
+  background: rgba(0, 90, 156, 0.6);
+  margin-left: -270px;
+  color: #fff;
+  transform: skewX(-210deg);
+  position: absolute;
+}
+
+.skew_3 {
+  width: 85vw;
+  height: 100vh;
+  background: rgba(0, 90, 156, 0.6);
+  margin-left: -350px;
+  color: #fff;
+  transform: skewX(-215deg);
+  position: absolute;
+}
+
+.main-heading {
+  margin-top: 40vh;
+  margin-left: 20%;
+  position: absolute;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.main-heading h1 {
+  margin: 10pt 0;
+}
+
+.main-heading h3 {
+  font-size: 2rem;
+  margin: 5pt 0;
+}
+
+.main-action {
+  margin-top: 20pt;
+}
+
+.main-action .signup {
+  /* center the button */
+  text-align: center;
+  display: inline-block;
+  width: 30%;
+  font-family: Calibri;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .skew {
+    width: 0;
+    height: 0;
+    background: none;
+    margin-left: 0;
+    color: #fff;
+    transform: unset;
+    position: absolute;
+  }
+
+  .skew_2 {
+    width: 0;
+    height: 0;
+    background: none;
+    margin-left: 0;
+    color: #fff;
+    transform: unset;
+    position: absolute;
+  }
+
+  .skew_3 {
+    width: 0;
+    height: 0;
+    background: none;
+    margin-left: 0;
+    color: #fff;
+    transform: unset;
+    position: absolute;
+  }
+
+  .main-heading {
+    margin: 30vh 10% 0 10%;
+    font-size: unset;
+  }
+
+}
+
+/***********************************************************************
+ *  SIGNUP BUTTON
+ **********************************************************************/
+.signup {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-color: #cd1041;
+  border-style: solid;
+  padding: 10px 30px;
+  transition: all 0.3s ease-out;
+  white-space:nowrap;
+}
+
+.signup:hover {
+  background-color: rgba(205, 16, 65, 0.9);
+}
+
+
+@media only screen and (max-width: 900px) {
+  .main-landing .signup {
+    width: 60%;
+  }
+
+}
+
+
+
+/***********************************************************************
+ *  CONTAINER
+ **********************************************************************/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/*COUNTDOWN*/
+#countdown {
+  padding: 35px;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+/*workshops*/
+#workshops {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 50px 150px;
+  min-height: 30vh;
+}
+
+#workshops h2 {
+  text-align: left;
+  margin: 4px 0;
+  font-size:18pt;
+}
+
+#workshops h3 {
+  text-align: left;
+  margin: 4px 0;
+  font-size: 14pt;
+}
+
+#workshops p {
+  text-align: left;
+  font-size: 14pt;
+  font-family: 'Segoe UI';
+}
+
+hr {
+  width: 100%;
+  margin: 30px 0;
+}
+
+/*AGENDA*/
+#agenda {
+  margin: 50px 0;
+}
+
+#agenda .download {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-color: #005a9c;
+  border-style: solid;
+  padding: 10px 30px;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#agenda .download:hover {
+  background-color: #009cdc;
+  border-color: #009cdc;
+}
+
+
+
+/*SPEAKERS*/
+#speakers {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 156, 220, 0.6), rgba(0, 156, 220, 0.6)),
+    url('img/speakers-background.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+#speakers h3 {
+  text-align: center;
+}
+
+.speaker-flex {
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.speaker-flex a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.box {
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+  margin: 0 40px;
+  padding: 150px;
+  color: black;
+  transition: all 0.3s ease-out;
+}
+
+.box:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+
+.speaker-one .box {
+  background-image: url('img/speakers/Graham_Sherman.jpg');
+  background-size: cover;
+}
+
+.speaker-two .box {
+  background-image: url('img/speakers/James_Cunningham.jpg');
+  background-size: cover
+}
+
+
+/* SPONSORS */
+#sponsors {
+  padding: 50px;
+  color: #000;
+}
+
+.sponsor-flex {
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor {
+  padding: 0 20px;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+  #countdown {
+    font-size: 1rem;
+  }
+
+  #workshops {
+    margin: 50px 30px;
+  }
+  
+#workshops h2 {
+  text-align: left;
+  margin: 4px 0;
+  font-size:16pt;
+}
+
+#workshops h3 {
+  text-align: left;
+  margin: 4px 0;
+  font-size: 14pt;
+}
+
+#workshops p {
+  text-align: left;
+  font-size: 14pt;
+  font-family: 'Segoe UI';
+}
+
+}
+
+
+
+
+
+/***********************************************************************
+ *  FOOTER
+ **********************************************************************/
+.footer {
+  background: #005a9c;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  text-align:center;
+}
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    font-size: 8pt;
+  }
+}
+
+
+/* Atlas Colours */
+/* #005a9c dark blue
+#009cdc light blue
+#cd1041 red */
+/***********************************************************************
+ *  ATLAS COLOURS
+ **********************************************************************/
+.dark-blue {
+  background: #005a9c;
+}
+
+.light-blue {
+  background: #009cdc;
+}
+
+.atlas-gradient {
+  background-image: linear-gradient(to right, #005a9c, #005a9c, #cd1041);
+}
+
+.red {
+  background: #cd1041;
+}
